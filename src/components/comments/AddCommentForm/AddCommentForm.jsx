@@ -21,7 +21,7 @@ const AddCommentForm = ({ post }) => {
         ...post,
         comments: post.comments,
       })
-      .then((response) => {
+      .then(() => {
         router.replace(router.asPath);
       })
       .catch((error) => {
@@ -31,7 +31,7 @@ const AddCommentForm = ({ post }) => {
 
   return (
     <>
-      <h2>Add a comment</h2>
+      <h2 className={styles.h2}>Add a comment</h2>
       <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
         <label className={styles.label}>
           Username:

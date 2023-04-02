@@ -7,7 +7,13 @@ const postComponent = ({ post }) => {
   console.log("postComponent");
   if (post) {
     return (
-      <Flex alignItems="center" justifyContent="center" bg="gray.100">
+      <Flex
+        alignItems="center"
+        direction="column"
+        justifyContent="center"
+        bg="gray.100"
+        gap={10}
+      >
         <Box
           p={50}
           borderWidth={1}
@@ -18,15 +24,40 @@ const postComponent = ({ post }) => {
           minWidth="400px"
           maxW="800px"
         >
-          <Heading as="h1" size="xl" mb={12}>
+          <Heading as="h1" size="xl" mt={8} mb={16}>
             {post.title}
           </Heading>
-          <Text fontSize="lg" mb={4}>
+          <Text fontSize="lg" mt={8} mb={16}>
             {post.body}
           </Text>
-          <AddCommentForm post={post} />
-          <CommentsSection comments={post.comments} />
         </Box>
+        <Flex gap={10}>
+          <Box
+            p={50}
+            borderWidth={1}
+            borderRadius={8}
+            boxShadow="lg"
+            border="1px solid black"
+            bg="white"
+            minWidth="400px"
+            maxW="800px"
+          >
+            <AddCommentForm post={post} />
+          </Box>
+
+          <Box
+            p={50}
+            borderWidth={1}
+            borderRadius={8}
+            boxShadow="lg"
+            border="1px solid black"
+            bg="white"
+            minWidth="400px"
+            maxW="800px"
+          >
+            <CommentsSection comments={post.comments} />
+          </Box>
+        </Flex>
       </Flex>
     );
   } else {

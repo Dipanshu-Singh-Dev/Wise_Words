@@ -1,6 +1,10 @@
+.h2{
+    text-align: center;
+}
 .form {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    gap: 25px;
     align-items: center;
     justify-content: center;
     margin:10px auto;
