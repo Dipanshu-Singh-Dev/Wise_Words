@@ -1,0 +1,42 @@
+.form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin:10px auto;
+    margin-bottom: 20px;
+}
+
+.label {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.label>span {
+    margin-left: 1rem;
+}
+
+.input,
+.textarea {
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.button {
+    margin:auto;
+    padding: 0.5rem 1rem;
+    background-color: #0070f3;
+    color: #fff;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #0060df;
+}

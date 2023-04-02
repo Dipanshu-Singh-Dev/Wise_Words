@@ -1,11 +1,17 @@
 import React from "react";
-import AddCommentForm from "./AddCommentForm";
-const Comments = () => {
-  console.log("on form");
+const Comments = ({ comments }) => {
+  console.log(comments);
   return (
     <div>
-      <AddCommentForm />
-      Comments
+      <h1>Comments : </h1>
+      {comments.map((e) => {
+        return (
+          <>
+            <h5>{e.username} said </h5>
+            <p>{e.comment}</p>
+          </>
+        );
+      })}
     </div>
   );
 };
