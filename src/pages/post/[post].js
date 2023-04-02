@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 import { Flex, Box, Heading, Text } from "@chakra-ui/react";
-
+import { Comments as CommentsSection } from "@/components";
 const postComponent = ({ post }) => {
   if (post) {
     return (
@@ -25,6 +25,7 @@ const postComponent = ({ post }) => {
             {post.title}
           </Heading>
           <Text fontSize="lg">{post.body}</Text>
+          <CommentsSection />
         </Box>
       </Flex>
     );
@@ -40,7 +41,6 @@ export async function getServerSideProps({ params }) {
   try {
     const response = await axios.get(`http://localhost:4000/posts/${postId}`);
     const post = await response.data;
-
     return {
       props: {
         post,
