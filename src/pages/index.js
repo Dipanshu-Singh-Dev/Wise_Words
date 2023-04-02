@@ -1,10 +1,13 @@
+import React from "react";
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
-import Navbar from "@/components/Navbar/Navbar";
 import axios from "axios";
-import BlogPostGrid from "@/components/Grid";
-
+import { Pagination, BlogPostGrid, Navbar } from "@/components";
 export default function Home({ posts }) {
+  const [page, setPage] = React.useState(1);
+  const updatePage = (num) => {
+    setPage(num);
+  };
   return (
     <>
       <Head>
@@ -15,16 +18,15 @@ export default function Home({ posts }) {
       </Head>
       <main className={styles.main}>
         <Navbar />
-        <BlogPostGrid posts={posts} />
+        <BlogPostGrid page={page} posts={posts} />
+        <Pagination updatePage={updatePage} page={page} />
       </main>
     </>
   );
 }
 export async function getServerSideProps() {
   try {
-    const response = await axios.get(
-      "http://localhost:4000/posts?_page=1&_limit=12"
-    );
+    const response = await axios.get("http://localhost:4000/posts");
     const posts = response.data;
 
     return {
