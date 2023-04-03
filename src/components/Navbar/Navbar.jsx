@@ -1,11 +1,18 @@
 import Link from "next/link";
 import styles from "./Navbar.module.css";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { useRouter } from "next/router";
 const Navbar = () => {
+  const router = useRouter();
   const role = useSelector((state) => state.role);
+  const dispatch = useDispatch();
+  const logOut = () => {
+    dispatch({ type: "", role: "", user: "" });
+    router.replace(router.asPath);
+  };
   const btn = role ? (
     <Link href="/">
-      <button>Log Out</button>
+      <button onClick={logOut}>Log Out</button>
     </Link>
   ) : (
     <Link href="login">
