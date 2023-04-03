@@ -40,7 +40,7 @@ const AddCommentForm = ({ post }) => {
             type="text"
             {...register("username", { required: true })}
           />
-          {errors.username && <span>This field is required</span>}
+          {errors.username && <span style={{ color: "red" }}>Required</span>}
         </label>
         <label className={styles.label}>
           Comment:
@@ -48,7 +48,7 @@ const AddCommentForm = ({ post }) => {
             className={styles.textarea}
             {...register("comment", { required: true })}
           />
-          {errors.comment && <span>This field is required</span>}
+          {errors.comment && <span style={{ color: "red" }}>Required</span>}
         </label>
         <button className={styles.button} type="submit">
           Submit
