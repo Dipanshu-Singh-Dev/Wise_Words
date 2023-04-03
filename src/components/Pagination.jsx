@@ -1,6 +1,6 @@
 const Pagination = ({ page, updatePage }) => {
   return (
-    <div>
+    <div style={{ textAlign: "center", marginTop: "25px" }}>
       <button onClick={() => updatePage(1)}>First</button>
       <button
         onClick={() => {

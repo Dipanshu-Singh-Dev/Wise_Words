@@ -2,7 +2,12 @@
   "posts": [
     {
       "author": "author2",
-      "comments": [],
+      "comments": [
+        {
+          "username": "Dipanshu",
+          "comment": "Facere"
+        }
+      ],
       "userId": 1,
       "id": 1,
       "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
@@ -826,6 +831,7 @@
   "users": [
     {
       "id": 1,
+      "username": "admin",
       "email": "admin@wise.words",
       "role": "admin",
       "password": "123456"
