@@ -1,0 +1,32 @@
+.container {
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #ccc;
+    padding: 3%;  
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    /* default width for large screens */
+}
+
+@media (max-width: 1200px) {
+
+    /* medium screens */
+    .container {
+        width: 80%;
+        gap: 25px;
+        padding: 2%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* small screens */
+    .container {
+        padding: 1%;
+        width: 95%;
+        gap: 10px;
+    }
+}

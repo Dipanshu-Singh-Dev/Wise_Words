@@ -50,9 +50,7 @@ const AddCommentForm = ({ post }) => {
           />
           {errors.comment && <span style={{ color: "red" }}>Required</span>}
         </label>
-        <button className={styles.button} type="submit">
-          Submit
-        </button>
+        <button type="submit">Submit</button>
       </form>
     </>
   );

@@ -4,12 +4,18 @@ import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/router";
 const Navbar = () => {
   const router = useRouter();
-  const role = useSelector((state) => state.role);
+  const { role, user } = useSelector((state) => state);
   const dispatch = useDispatch();
   const logOut = () => {
     dispatch({ type: "", role: "", user: "" });
     router.replace(router.asPath);
   };
+  const create =
+    role == "admin" || role == "author" ? (
+      <Link href="/create">
+        <button>Create</button>
+      </Link>
+    ) : null;
   const btn = role ? (
     <Link href="/">
       <button onClick={logOut}>Log Out</button>
@@ -25,6 +31,7 @@ const Navbar = () => {
         <Link href="/">Wise Words</Link>
       </div>
       <div className={styles.loginButtons}>
+        {create}
         {btn}
         <button className={styles.signUpBtn}>Sign Up</button>
       </div>

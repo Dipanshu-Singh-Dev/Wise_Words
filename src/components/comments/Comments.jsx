@@ -7,7 +7,7 @@ const Comments = ({ comments }) => {
       {comments.map((e) => {
         return (
           <>
-            <h5>{e.username} said </h5>
+            <h6>{e.username} said </h6>
             <p>{e.comment}</p>
           </>
         );

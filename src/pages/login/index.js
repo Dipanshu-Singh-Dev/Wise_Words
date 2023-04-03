@@ -1,11 +1,13 @@
 import { useState } from "react";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
+
+import { useRouter } from "next/router";
 const Login = () => {
+  const router = useRouter();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
-  const role = useSelector((state) => state.role);
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -23,6 +25,7 @@ const Login = () => {
       if (deets.length == 0) window.alert("Please check your credentials");
       else {
         dispatch({ type: "Login", role, user });
+        router.push("/");
       }
     } catch (error) {
       window.alert("Error");

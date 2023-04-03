@@ -7,13 +7,7 @@ const postComponent = ({ post }) => {
   console.log("postComponent");
   if (post) {
     return (
-      <Flex
-        alignItems="center"
-        direction="column"
-        justifyContent="center"
-        bg="gray.100"
-        gap={10}
-      >
+      <Flex direction="row" justifyContent="center" bg="gray.100" gap={10}>
         <Box
           p={50}
           borderWidth={1}
@@ -31,7 +25,7 @@ const postComponent = ({ post }) => {
             {post.body}
           </Text>
         </Box>
-        <Flex gap={10}>
+        <Flex gap={10} direction="column">
           <Box
             p={50}
             borderWidth={1}
