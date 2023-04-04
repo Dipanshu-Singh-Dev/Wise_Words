@@ -27,7 +27,7 @@
       "userId": 1,
       "id": 4,
       "title": "eum et est occaecati",
-      "body": "ullam et saepe reiciendis voluptatem adipisci sit amet autem assumenda provident rerum culpa quis hic commodi nesciunt rem tenetur doloremque ipsam iure quis sunt voluptatem rerum illo velit"
+      "body": "<p><strong>ullam</strong> et saepe reiciendis voluptatem <em>adipisci</em> sit amet autem assumenda provident rerum culpa quis hic commodi nesciunt rem tenetur doloremque ipsam iure quis sunt voluptatem rerum illo velit</p>"
     },
     {
       "author": "author2",
@@ -751,6 +751,11 @@
           "comment": "It works"
         }
       ]
+    },
+    {
+      "title": "eum et est occaecati",
+      "body": "<p><strong>ullam</strong> et saepe reiciendis voluptatem <strong>adipisci</strong> sit amet autem assumenda provident rerum culpa quis hic commodi nesciunt rem tenetur doloremque ipsam iure quis sunt voluptatem rerum illo velit</p>",
+      "id": 106
     }
   ],
   "users": [

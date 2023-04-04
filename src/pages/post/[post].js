@@ -6,9 +6,10 @@ import { Comments as CommentsSection, AddCommentForm } from "@/components";
 import parse from "html-react-parser";
 import styles from "./index.module.css";
 import { useSelector } from "react-redux";
+import { useRouter } from "next/router";
 const PostComponent = ({ post }) => {
   let { title, body } = post;
-
+  const router = useRouter();
   const { role, user } = useSelector((state) => state);
   const [Body, setBody] = React.useState(body);
   const edit =
@@ -17,7 +18,21 @@ const PostComponent = ({ post }) => {
         <button>Edit</button>
       </Link>
     ) : null;
-  console.log(edit);
+  const handleDelete = async () => {
+    try {
+      const response = await axios.delete(
+        `http://localhost:4000/posts/${post.id}`
+      );
+      router.replace("/");
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  const deleteBlog =
+    role == "admin" || (role == "author" && user == post.author) ? (
+      <button onClick={handleDelete}>Delete</button>
+    ) : null;
+
   React.useEffect(() => {
     setBody(parse(body));
   }, []);
@@ -39,6 +54,8 @@ const PostComponent = ({ post }) => {
               {title}
             </Heading>
             {Body}
+            <br />
+            {deleteBlog}
             {edit}
           </Box>
           <Flex gap={10} direction="column">
