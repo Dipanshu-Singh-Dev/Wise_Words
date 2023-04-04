@@ -50,7 +50,7 @@ const PostComponent = ({ post }) => {
             maxW="800px"
           >
             <Heading as="h1" size="xl" mt={8} mb={16}>
-              {title}
+              {title} by <span style={{ color: "gray" }}>{post.author}</span>
             </Heading>
             {Body}
             <br />
