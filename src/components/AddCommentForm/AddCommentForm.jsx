@@ -3,7 +3,7 @@ import styles from "./AddCommentForm.module.css";
 import axios from "axios";
 import { useRouter } from "next/router";
 const AddCommentForm = ({ post }) => {
-  console.log(post);
+  // console.log(post);
   const router = useRouter();
   const {
     register,
@@ -12,14 +12,15 @@ const AddCommentForm = ({ post }) => {
   } = useForm();
 
   const onSubmit = async ({ username, comment }) => {
-    post.comments.push({
+    const commentsArr = post.comments || [];
+    commentsArr.push({
       username,
       comment,
     });
     axios
       .patch(`http://localhost:4000/posts/${post.id}`, {
         ...post,
-        comments: post.comments,
+        comments: commentsArr,
       })
       .then(() => {
         router.replace(router.asPath);

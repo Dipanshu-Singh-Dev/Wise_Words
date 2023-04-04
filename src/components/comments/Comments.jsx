@@ -1,17 +1,18 @@
 import React from "react";
 const Comments = ({ comments }) => {
-  console.log(comments);
+  // console.log(comments);
   return (
     <div>
       <h1>Comments : </h1>
-      {comments.map((e) => {
-        return (
-          <>
-            <h6>{e.username} said </h6>
-            <p>{e.comment}</p>
-          </>
-        );
-      })}
+      {comments &&
+        comments.map((e) => {
+          return (
+            <>
+              <h6>{e.username} said </h6>
+              <p>{e.comment}</p>
+            </>
+          );
+        })}
     </div>
   );
 };

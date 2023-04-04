@@ -19,7 +19,6 @@ export default function Home({ posts }) {
       <main className={styles.main}>
         <Navbar />
         <BlogPostGrid page={page} posts={posts} />
-        <Pagination updatePage={updatePage} page={page} />
       </main>
     </>
   );

@@ -1,11 +1,9 @@
 import React, { useState } from "react";
-import { useForm, useFormContext } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import dynamic from "next/dynamic";
-import { convertToRaw } from "draft-js";
 import { stateToHTML } from "draft-js-export-html";
-import "draft-js/dist/Draft.css";
-import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
 import styles from "./index.module.css";
+import axios from "axios";
 import { useSelector } from "react-redux";
 const Editor = dynamic(
   () => import("react-draft-wysiwyg").then((module) => module.Editor),
@@ -22,11 +20,22 @@ const BlogPostForm = () => {
     formState: { errors },
   } = useForm();
   const { role, user } = useSelector((state) => state);
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     const contentState = editorState.getCurrentContent();
     const html = stateToHTML(contentState);
-    console.log(data, html);
+    console.log(data.title, html);
+    const requestData = { author: user, title: data.title, body: html };
+    try {
+      const response = await axios.post(
+        "http://localhost:4000/posts",
+        requestData
+      );
+      console.log(response.data);
+    } catch (error) {
+      console.error(error);
+    }
   };
+
   if (role && (role == "author" || role == "admin"))
     return (
       <>
@@ -48,7 +57,7 @@ const BlogPostForm = () => {
             {errors.title && <span style={{ color: "red" }}>Required</span>}
           </div>
           <div>
-            <label>Body</label>{" "}
+            <label>Body</label>
             <Editor
               editorStyle={{
                 border: "1px solid lightgray",

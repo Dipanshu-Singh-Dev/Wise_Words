@@ -14,31 +14,6 @@
       "body": "quia et suscipit suscipit recusandae consequuntur expedita et cum reprehenderit molestiae ut ut quas totam nostrum rerum est autem sunt rem eveniet architecto"
     },
     {
-      "author": "author1",
-      "comments": [
-        {
-          "username": "Dipanshu",
-          "comment": "Singh"
-        },
-        {
-          "username": "sadfasd",
-          "comment": "dsaf"
-        },
-        {
-          "username": "sadfasd",
-          "comment": "dsaf"
-        },
-        {
-          "username": "Dipanshu",
-          "comment": "good"
-        }
-      ],
-      "userId": 1,
-      "id": 2,
-      "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
-      "body": "quia et suscipit suscipit recusandae consequuntur expedita et cum reprehenderit molestiae ut ut quas totam nostrum rerum est autem sunt rem eveniet architecto"
-    },
-    {
       "author": "author2",
       "comments": [],
       "userId": 1,
@@ -732,100 +707,50 @@
       "body": "consequatur omnis est praesentium ducimus non iste neque hic deserunt voluptatibus veniam cum et rerum sed"
     },
     {
-      "author": "author2",
-      "comments": [],
-      "userId": 9,
-      "id": 89,
-      "title": "sint soluta et vel magnam aut ut sed qui",
-      "body": "repellat aut aperiam totam temporibus autem et architecto magnam ut consequatur qui cupiditate rerum quia soluta dignissimos nihil iure tempore quas est"
+      "author": "admin",
+      "title": "Hello",
+      "body": "<p><strong>Hello</strong></p>",
+      "id": 101,
+      "comments": [
+        {
+          "username": "Dipanshu",
+          "comment": "123"
+        },
+        {
+          "username": "Dipanshu",
+          "comment": "no"
+        }
+      ]
     },
     {
-      "author": "author2",
-      "comments": [],
-      "userId": 9,
-      "id": 90,
-      "title": "ad iusto omnis odit dolor voluptatibus",
-      "body": "minus omnis soluta quia qui sed adipisci voluptates illum ipsam voluptatem eligendi officia ut in eos soluta similique molestias praesentium blanditiis"
+      "author": "admin",
+      "title": "shalom",
+      "body": "<p>namaste</p>",
+      "id": 102
     },
     {
-      "author": "author2",
-      "comments": [],
-      "userId": 10,
-      "id": 91,
-      "title": "aut amet sed",
-      "body": "libero voluptate eveniet aperiam sed sunt placeat suscipit molestias similique fugit nam natus expedita consequatur consequatur dolores quia eos et placeat"
+      "author": "admin",
+      "title": "shalom",
+      "body": "<p>namaste</p>",
+      "id": 103
     },
     {
-      "author": "author2",
-      "comments": [],
-      "userId": 10,
-      "id": 92,
-      "title": "ratione ex tenetur perferendis",
-      "body": "aut et excepturi dicta laudantium sint rerum nihil laudantium et at a neque minima officia et similique libero et commodi voluptate qui"
+      "author": "admin",
+      "title": "Hello",
+      "body": "<p><strong>SHalom</strong></p>",
+      "id": 104
     },
     {
-      "author": "author2",
-      "comments": [],
-      "userId": 10,
-      "id": 93,
-      "title": "beatae soluta recusandae",
-      "body": "dolorem quibusdam ducimus consequuntur dicta aut quo laboriosam voluptatem quis enim recusandae ut sed sunt nostrum est odit totam sit error sed sunt eveniet provident qui nulla"
-    },
-    {
-      "author": "author2",
-      "comments": [],
-      "userId": 10,
-      "id": 94,
-      "title": "qui qui voluptates illo iste minima",
-      "body": "aspernatur expedita soluta quo ab ut similique expedita dolores amet sed temporibus distinctio magnam saepe deleniti omnis facilis nam ipsum natus sint similique omnis"
-    },
-    {
-      "author": "author2",
-      "comments": [],
-      "userId": 10,
-      "id": 95,
-      "title": "id minus libero illum nam ad officiis",
-      "body": "earum voluptatem facere provident blanditiis velit laboriosam pariatur accusamus odio saepe cumque dolor qui a dicta ab doloribus consequatur omnis corporis cupiditate eaque assumenda ad nesciunt"
-    },
-    {
-      "author": "author2",
-      "comments": [],
-      "userId": 10,
-      "id": 96,
-      "title": "quaerat velit veniam amet cupiditate aut numquam ut sequi",
-      "body": "in non odio excepturi sint eum labore voluptates vitae quia qui et inventore itaque rerum veniam non exercitationem delectus aut"
-    },
-    {
-      "author": "author2",
-      "comments": [],
-      "userId": 10,
-      "id": 97,
-      "title": "quas fugiat ut perspiciatis vero provident",
-      "body": "eum non blanditiis soluta porro quibusdam voluptas vel voluptatem qui placeat dolores qui velit aut vel inventore aut cumque culpa explicabo aliquid at perspiciatis est et voluptatem dignissimos dolor itaque sit nam"
-    },
-    {
-      "author": "author2",
-      "comments": [],
-      "userId": 10,
-      "id": 98,
-      "title": "laboriosam dolor voluptates",
-      "body": "doloremque ex facilis sit sint culpa soluta assumenda eligendi non ut eius sequi ducimus vel quasi veritatis est dolores"
-    },
-    {
-      "author": "author2",
-      "comments": [],
-      "userId": 10,
-      "id": 99,
-      "title": "temporibus sit alias delectus eligendi possimus magni",
-      "body": "quo deleniti praesentium dicta non quod aut est molestias molestias et officia quis nihil itaque dolorem quia"
-    },
-    {
-      "author": "author2",
-      "comments": [],
-      "userId": 10,
-      "id": 100,
-      "title": "at nam consequatur ea labore ea harum",
-      "body": "cupiditate quo est a modi nesciunt soluta ipsa voluptas error itaque dicta in autem qui minus magnam et distinctio eum accusamus ratione error aut"
+      "author": "admin",
+      "title": "Hello",
+      "body": "<p><strong>SHalom</strong></p>",
+      "id": 105,
+      "comments": [
+        {
+          "username": "Dipanshu",
+          "comment": "It works"
+        }
+      ]
     }
   ],
   "users": [
