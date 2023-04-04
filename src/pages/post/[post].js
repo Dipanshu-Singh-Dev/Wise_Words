@@ -18,12 +18,11 @@ const PostComponent = ({ post }) => {
         <button>Edit</button>
       </Link>
     ) : null;
-  const handleDelete = async () => {
+  const handleDelete = () => {
     try {
-      const response = await axios.delete(
-        `http://localhost:4000/posts/${post.id}`
-      );
-      router.replace("/");
+      axios
+        .delete(`http://localhost:4000/posts/${post.id}`)
+        .then(() => router.replace("/"));
     } catch (error) {
       console.error(error);
     }
