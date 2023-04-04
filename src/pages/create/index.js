@@ -11,6 +11,15 @@ const Editor = dynamic(
     ssr: false,
   }
 );
+const toolbar = {
+  options: ["inline", "list"],
+  inline: {
+    options: ["bold", "italic", "underline"],
+  },
+  list: {
+    options: ["unordered", "ordered"],
+  },
+};
 
 const BlogPostForm = () => {
   const [editorState, setEditorState] = useState(null);
@@ -59,6 +68,7 @@ const BlogPostForm = () => {
           <div>
             <label>Body</label>
             <Editor
+              toolbar={toolbar}
               editorStyle={{
                 border: "1px solid lightgray",
                 borderRadius: "5px",

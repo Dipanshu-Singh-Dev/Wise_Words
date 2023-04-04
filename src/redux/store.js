@@ -1,7 +1,7 @@
 const { legacy_createStore: createStore } = require("redux");
 const def = {
-  role: "",
-  user: "",
+  role: "admin",
+  user: "admin",
 };
 const reducer = (state = def, action) => {
   if (action)
@@ -12,6 +12,6 @@ const reducer = (state = def, action) => {
     };
   else return { ...state };
 };
-const store = createStore(reducer);
+const store = createStore(reducer, def);
 
 export default store;

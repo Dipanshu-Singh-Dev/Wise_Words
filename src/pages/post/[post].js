@@ -1,19 +1,30 @@
 import React from "react";
 import axios from "axios";
-import { Flex, Box, Heading, Text } from "@chakra-ui/react";
+import Link from "next/link";
+import { Flex, Box, Heading } from "@chakra-ui/react";
 import { Comments as CommentsSection, AddCommentForm } from "@/components";
 import parse from "html-react-parser";
-
+import styles from "./index.module.css";
+import { useSelector } from "react-redux";
 const PostComponent = ({ post }) => {
   let { title, body } = post;
+
+  const { role, user } = useSelector((state) => state);
   const [Body, setBody] = React.useState(body);
+  const edit =
+    role == "admin" || (role == "author" && user == post.author) ? (
+      <Link href={`/edit/${post.id}`}>
+        <button>Edit</button>
+      </Link>
+    ) : null;
+  console.log(edit);
   React.useEffect(() => {
     setBody(parse(body));
   }, []);
   if (post) {
     return (
       <>
-        <Flex direction="row" justifyContent="center" bg="gray.100" gap={10}>
+        <Flex className={styles.flex} direction="row" bg="gray.100" gap={10}>
           <Box
             p={50}
             borderWidth={1}
@@ -21,13 +32,14 @@ const PostComponent = ({ post }) => {
             boxShadow="lg"
             border="1px solid black"
             bg="white"
-            minWidth="400px"
+            minWidth="20vw"
             maxW="800px"
           >
             <Heading as="h1" size="xl" mt={8} mb={16}>
               {title}
             </Heading>
             {Body}
+            {edit}
           </Box>
           <Flex gap={10} direction="column">
             <Box
@@ -37,7 +49,7 @@ const PostComponent = ({ post }) => {
               boxShadow="lg"
               border="1px solid black"
               bg="white"
-              minWidth="400px"
+              minWidth="200px"
               maxW="800px"
             >
               <AddCommentForm post={post} />
@@ -50,7 +62,7 @@ const PostComponent = ({ post }) => {
               boxShadow="lg"
               border="1px solid black"
               bg="white"
-              minWidth="400px"
+              minWidth="200px"
               maxW="800px"
             >
               <CommentsSection comments={post.comments} />
