@@ -21,7 +21,6 @@ const Login = () => {
         if (e.username === username && e.password === password) return e;
       });
       const { role, username: user } = deets[0];
-      console.log(role, user);
       if (deets.length == 0) window.alert("Please check your credentials");
       else {
         dispatch({ type: "Login", role, user });

@@ -4,10 +4,7 @@ import styles from "@/styles/Home.module.css";
 import axios from "axios";
 import { Pagination, BlogPostGrid, Navbar } from "@/components";
 export default function Home({ posts }) {
-  const [page, setPage] = React.useState(1);
-  const updatePage = (num) => {
-    setPage(num);
-  };
+  // console.log(posts);
   return (
     <>
       <Head>
@@ -18,7 +15,7 @@ export default function Home({ posts }) {
       </Head>
       <main className={styles.main}>
         <Navbar />
-        <BlogPostGrid page={page} posts={posts} />
+        <BlogPostGrid posts={posts} />
       </main>
     </>
   );
