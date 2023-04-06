@@ -1,4 +1,4 @@
-**Pre-requisites:** [Node](https://nodejs.org/en/download) ,Any Terminal.
+**Pre-requisites:** [NodeJS](https://nodejs.org/en/download) ,Any Terminal.
 
 **Steps to run this app :**
 
