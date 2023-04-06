@@ -1,4 +1,4 @@
-**Pre-requisites:** Node,NPM,A terminal software.
+**Pre-requisites:** Node,NPM,Any Terminal.
 **Steps to run this app :**
 
 1. After importing the this project on your system, Open the terminal in the directory where the parent folder of this document is located or cd into the directory.
