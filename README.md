@@ -71,7 +71,6 @@ For testing three users have been created :
   _Password_ : 123456
 
 _7. User Roles:_
-As instructed by the assingment pdf:
 
 | Roles                 | Can edit posts? | Can edit which posts? | Can create posts? | Can delete posts? | Can delete which posts? | Can read posts? | Can comment on posts? |
 | --------------------- | --------------- | --------------------- | ----------------- | ----------------- | ----------------------- | --------------- | --------------------- |
