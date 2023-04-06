@@ -3,7 +3,6 @@ import styles from "./AddCommentForm.module.css";
 import axios from "axios";
 import { useRouter } from "next/router";
 const AddCommentForm = ({ post }) => {
-  // console.log(post);
   const router = useRouter();
   const {
     register,
@@ -35,7 +34,7 @@ const AddCommentForm = ({ post }) => {
       <h2 className={styles.h2}>Add a comment</h2>
       <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
         <label className={styles.label}>
-          Username:
+          Name:
           <input
             className={styles.input}
             type="text"

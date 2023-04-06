@@ -32,7 +32,7 @@ const PostComponent = ({ post }) => {
       <button onClick={handleDelete}>Delete</button>
     ) : null;
 
-  React.useEffect(() => {
+  React.useLayoutEffect(() => {
     setBody(parse(body));
   }, []);
   if (post) {

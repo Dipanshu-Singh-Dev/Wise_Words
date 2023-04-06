@@ -55,6 +55,7 @@ export default function BlogPostGrid({ posts, itemsPerPage = 10 }) {
         >
           Next
         </Button>
+
         <Box ml={2}>{`Page ${currentPage} of ${totalPages}`}</Box>
       </Box>
     </>

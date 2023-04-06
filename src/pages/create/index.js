@@ -4,6 +4,7 @@ import dynamic from "next/dynamic";
 import { stateToHTML } from "draft-js-export-html";
 import styles from "./index.module.css";
 import axios from "axios";
+import { useRouter } from "next/router";
 import { useSelector } from "react-redux";
 const Editor = dynamic(
   () => import("react-draft-wysiwyg").then((module) => module.Editor),
@@ -29,6 +30,7 @@ const BlogPostForm = () => {
     formState: { errors },
   } = useForm();
   const { role, user } = useSelector((state) => state);
+  const router = useRouter();
   const onSubmit = async (data) => {
     const contentState = editorState.getCurrentContent();
     const html = stateToHTML(contentState);
@@ -39,6 +41,7 @@ const BlogPostForm = () => {
         "http://localhost:4000/posts",
         requestData
       );
+      router.push("/");
       console.log(response.data);
     } catch (error) {
       console.error(error);
