@@ -19,7 +19,7 @@ The project achieves all the goals set in the assignment.
 | Roles | Can edit posts? | Can edit which posts? | Can create posts? | Can delete posts? | Can delete which posts? | Can read posts? | Can comment on posts? |
 | --------------------- | --------------- | --------------------- | ----------------- | ----------------- | ----------------------- | --------------- | --------------------- |
 | Admin | Yes | Any | Yes | Yes | Any | Yes | Yes |
-| Author | Yes | Their Own | Yes | Yes | Their Own | Yes | Yes |
+| Author | Yes | Their own | Yes | Yes | Their own | Yes | Yes |
 | Reader(Logged in) | No | None | Yes | No | None | Yes | Yes |
 | Reader(Not Logged in) | No | None | No | No | None | Yes | No |
 **Demo IDs**
