@@ -73,5 +73,5 @@ On clicking the Edit button on any post page we will take to the Edit page for t
 - On Submitting a Patch request is made instead of a Post request.
 
 _6. Login:_
-Login page is a simple form to log the user in and provide them role in redux store of either an _Author_ or an _admin_.
+Login page is a simple form to log the user in and provide them role in redux store of either an _Author_, an _Admin_ or a _Reader_.
 The page is rendered using Static Generation since no props are needed.
