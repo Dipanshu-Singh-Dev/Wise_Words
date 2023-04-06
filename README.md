@@ -48,8 +48,8 @@ _3. Create Page:_
 
 - _Add Post Form_
   On this page there are two input fields one for _Title_ and one for _Body_.
-  - The Body Input field with DraftJS and React Draft Wysiwyg.
+  - The Body Input field is built with React Draft Wysiwyg a library built with DraftJS and ReactJS.
   - There are 5 options to make the text rich. Make it Bold,Italic or underline or make an ordered or unordered list.
-  - On Submitting,
-    -The form does client side validation with React-Hook-Form such that none of the fields can be empty.
-    -Then an axios post request is made with the username stored in redux store and the title & body in the form.
+  - On Submitting :
+    1.The form does client side validation with React-Hook-Form such that none of the fields can be empty.
+    2.Then an axios post request is made with the username stored in redux store and the title & body in the form.
