@@ -14,6 +14,27 @@ Please note the Reader role works without login.
 
 **Project Description**
 The project achieves all the goals set in the assignment.
+**User Roles:**
+| Roles | Can edit posts? | Can edit which posts? | Can create posts? | Can delete posts? | Can delete which posts? | Can read posts? | Can comment on posts? |
+| --------------------- | --------------- | --------------------- | ----------------- | ----------------- | ----------------------- | --------------- | --------------------- |
+| Admin | Yes | Any | Yes | Yes | Any | Yes | Yes |
+| Author | Yes | Their Own | Yes | Yes | Their Own | Yes | Yes |
+| Reader(Logged in) | No | None | Yes | No | None | Yes | Yes |
+| Reader(Not Logged in) | No | None | No | No | None | Yes | No |
+**Demo IDs**
+
+- _Role_ : Admin,
+  _Username_ : admin,
+  _Password_ : 123456
+- _Role_ : Author,
+  _Username_ : author1,
+  _Password_ : 123456
+- _Role_ : Author,
+  _Username_ : author2,
+  _Password_ : 123456
+- _Role_: Reader,
+  _Username_: reader,
+  _Password_ : 123456
 
 **Pages :**
 
@@ -55,26 +76,3 @@ If the user is either logged in as admin or the author of the post they see dele
 _6. Login:_
 Login page is a simple form to log the user in and provide them role in redux store of either an _Author_ or an _admin_.
 The page is rendered using Static Generation since no props are needed.
-For testing three users have been created :
-
-- _Role_ : Admin,
-  _Username_ : admin,
-  _Password_ : 123456
-- _Role_ : Author,
-  _Username_ : author1,
-  _Password_ : 123456
-- _Role_ : Author,
-  _Username_ : author2,
-  _Password_ : 123456
-- _Role_: Reader,
-  _Username_: reader,
-  _Password_ : 123456
-
-_7. User Roles:_
-
-| Roles                 | Can edit posts? | Can edit which posts? | Can create posts? | Can delete posts? | Can delete which posts? | Can read posts? | Can comment on posts? |
-| --------------------- | --------------- | --------------------- | ----------------- | ----------------- | ----------------------- | --------------- | --------------------- |
-| Admin                 | Yes             | Any                   | Yes               | Yes               | Any                     | Yes             | Yes                   |
-| Author                | Yes             | Their Own             | Yes               | Yes               | Their Own               | Yes             | Yes                   |
-| Reader(Logged in)     | No              | None                  | Yes               | No                | None                    | Yes             | Yes                   |
-| Reader(Not Logged in) | No              | None                  | No                | No                | None                    | Yes             | No                    |
