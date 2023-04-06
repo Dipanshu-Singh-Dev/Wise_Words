@@ -31,9 +31,7 @@ The project achieves all the goals set in the assignment.
 **Pages :**
 
 _1. Homepage:_
--Homepage's first page is Server-Side Rendered as can be verified by turning off javascript for the site.
-On turning it off we can see all of the html but no styling since chakra-ui was used to style homepage components.
-Pagination is implemented on the client-side with JS thus pagination does not work without JS.
+-Homepage's first page is Server-Side Rendered as can be verified by turning off javascript for the site.On turning it off we can see all of the html but no styling since chakra-ui was used to style homepage components.Pagination is implemented on the client-side with JS thus pagination does not work without JS.
 -Without logging in a user is able to access all posts and comment on them and see comments by others.
 
 _2. Post page:_
