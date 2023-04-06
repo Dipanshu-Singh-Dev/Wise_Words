@@ -73,10 +73,9 @@ For testing three users have been created :
 _7. User Roles:_
 As instructed by the assingment pdf:
 
-- Admin : The Admin can edit or delete any post. They can also create posts.
-- Author : They can edit or delete their posts. They can also create posts.
-- | Roles  | Can Edit Posts? | Can Create Posts? |
-  | ------ | --------------- | ----------------- |
-  | Admin  | Yes             | Yes               |
-  | Author | Yes             | Yes               |
-  | Reader | No.             | No                |
+- | Roles                 | Can Edit Posts? | Can Edit Which Posts? | Can Create Posts? | Can Delete Posts? | Column 6        | Column 7        |
+  | --------------------- | --------------- | --------------------- | ----------------- | ----------------- | --------------- | --------------- |
+  | Admin                 | Yes             | Any                   | Yes               | Yes               | Row 1, Column 6 | Row 1, Column 7 |
+  | Author                | Yes             | Their Own             | Yes               | Yes               | Row 2, Column 6 | Row 2, Column 7 |
+  | Reader(Logged in)     | No              | None                  | Yes               | No                | Row 3, Column 6 | Row 3, Column 7 |
+  | Reader(Not Logged in) | No              | None                  | No                | No                | Row 4, Column 6 | Row 4, Column 7 |
