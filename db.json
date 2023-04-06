@@ -6,6 +6,10 @@
         {
           "username": "Dipanshu",
           "comment": "Facere"
+        },
+        {
+          "username": "reader",
+          "comment": "123456"
         }
       ],
       "userId": 1,
@@ -289,6 +293,12 @@
       "role": "author",
       "username": "author2",
       "email": "author2@wise.words",
+      "password": "123456"
+    },
+    {
+      "id": 3,
+      "role": "reader",
+      "username": "reader",
       "password": "123456"
     }
   ]

@@ -2,9 +2,13 @@ import React from "react";
 import Head from "next/head";
 import styles from "@/styles/Home.module.css";
 import axios from "axios";
-import { Pagination, BlogPostGrid, Navbar } from "@/components";
+import { useRouter } from "next/router";
+import { BlogPostGrid, Navbar } from "@/components";
+import { useSelector } from "react-redux";
 export default function Home({ posts }) {
-  // console.log(posts);
+  const router = useRouter();
+  const { role, username } = useSelector((state) => state);
+
   return (
     <>
       <Head>

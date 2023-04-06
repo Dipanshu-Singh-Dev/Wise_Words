@@ -35,7 +35,9 @@ const PostComponent = ({ post }) => {
   React.useLayoutEffect(() => {
     setBody(parse(body));
   }, []);
-  if (post) {
+  if (!post) {
+    return <h1>Post Not Found</h1>;
+  } else {
     return (
       <>
         <Flex className={styles.flex} direction="row" bg="gray.100" gap={10}>
@@ -58,18 +60,20 @@ const PostComponent = ({ post }) => {
             {edit}
           </Box>
           <Flex gap={10} direction="column">
-            <Box
-              p={50}
-              borderWidth={1}
-              borderRadius={8}
-              boxShadow="lg"
-              border="1px solid black"
-              bg="white"
-              minWidth="200px"
-              maxW="800px"
-            >
-              <AddCommentForm post={post} />
-            </Box>
+            {role && (
+              <Box
+                p={50}
+                borderWidth={1}
+                borderRadius={8}
+                boxShadow="lg"
+                border="1px solid black"
+                bg="white"
+                minWidth="200px"
+                maxW="800px"
+              >
+                <AddCommentForm post={post} />
+              </Box>
+            )}
 
             <Box
               p={50}
@@ -87,8 +91,6 @@ const PostComponent = ({ post }) => {
         </Flex>
       </>
     );
-  } else {
-    return <h1>Post Not Found</h1>;
   }
 };
 

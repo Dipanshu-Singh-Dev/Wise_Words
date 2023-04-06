@@ -2,18 +2,20 @@ import { useForm } from "react-hook-form";
 import styles from "./AddCommentForm.module.css";
 import axios from "axios";
 import { useRouter } from "next/router";
+import { useSelector } from "react-redux";
 const AddCommentForm = ({ post }) => {
   const router = useRouter();
+  const user = useSelector((state) => state.user);
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-  const onSubmit = async ({ username, comment }) => {
+  const onSubmit = async ({ comment }) => {
     const commentsArr = post.comments || [];
     commentsArr.push({
-      username,
+      username: user,
       comment,
     });
     axios
@@ -33,15 +35,6 @@ const AddCommentForm = ({ post }) => {
     <>
       <h2 className={styles.h2}>Add a comment</h2>
       <form className={styles.form} onSubmit={handleSubmit(onSubmit)}>
-        <label className={styles.label}>
-          Name:
-          <input
-            className={styles.input}
-            type="text"
-            {...register("username", { required: true })}
-          />
-          {errors.username && <span style={{ color: "red" }}>Required</span>}
-        </label>
         <label className={styles.label}>
           Comment:
           <input

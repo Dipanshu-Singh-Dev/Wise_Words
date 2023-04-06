@@ -72,7 +72,8 @@ As instructed by the assingment pdf:
 
 - Admin : The Admin can edit or delete any post. They can also create posts.
 - Author : They can edit or delete their posts. They can also create posts.
-- | Column 1        | Column 2        | Column 3        |
-  | --------------- | --------------- | --------------- |
-  | Row 1, Column 1 | Row 1, Column 2 | Row 1, Column 3 |
-  | Row 2, Column 1 | Row 2, Column 2 | Row 2, Column 3 |
+- | Roles  | Can Edit Posts? | Can Create Posts? |
+  | ------ | --------------- | ----------------- |
+  | Admin  | Yes             | Yes               |
+  | Author | Yes             | Yes               |
+  | Reader | No.             | No                |
