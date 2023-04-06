@@ -10,19 +10,6 @@ Run "npm run client"
 Access the client [here](http://localhost:3000)
 Access the server [here](http://localhost:4000)
 
-UserIds :
-Username : admin,
-Role : admin,
-Password : 123456
-
-Username : author1,
-Role : author,
-Password : 123456
-
-Username : author2,
-Role : author,
-Password : 123456
-
 Please note the Reader role works without login.
 
 **Project Description**
@@ -46,7 +33,7 @@ The post page has three parts:
 _3. Create Page:_
 
 - On the Home Page when the user is logged in as an _Author_ or an _Admin_ a Create button is conditionally rendered to provide them access to the Page for creating a post.Even if we try to access the create route by editing the url we will only get the message "Not Authorized".
-
+- The page is rendered using Static Generation since no props are needed.
 - _Add Post Form_
   On this page there are two input fields one for _Title_ and one for _Body_.
   - The Body Input field is built with React Draft Wysiwyg a library built with DraftJS and ReactJS.
@@ -64,3 +51,18 @@ On clicking the Edit button on any post page we will take to the Edit page for t
 
 _5. Delete Button:_
 If the user is either logged in as admin or the author of the post they see delete button on the post page and on clicking it they can delete the post from the database.
+
+_6. Login:_
+Login page is a simple form to log the user in and provide them role in redux store of either an _Author_ or an _admin_.
+The page is rendered using Static Generation since no props are needed.
+For testing three users have been created :
+
+- _Username_ : admin,
+  _Role_ : admin,
+  _Password_ : 123456
+- _Username_ : author1,
+  _Role_ : author,
+  _Password_ : 123456
+- _Username_ : author2,
+  _Role_ : author,
+  _Password_ : 123456
