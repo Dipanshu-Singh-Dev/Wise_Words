@@ -1,11 +1,11 @@
-Pre-requisites: Node,NPM,A terminal software.
+**Pre-requisites:** Node,NPM,A terminal software.
+**Steps to run this app :**
 
-Open the terminal in the directory where the parent folder of this document is located or cd into the directory.
-Run "npm i" in the terminal app.
-After the installation ends.
-Run "npm run server"
-Open another instance of the terminal app
-Run "npm run client"
+1. After importing the this project on your system, Open the terminal in the directory where the parent folder of this document is located or cd into the directory.
+2. Run "npm i" in the terminal app.
+3. After the installation ends, Run "npm run server"
+4. Open another instance of the terminal app
+5. Run "npm run client"
 
 Access the client [here](http://localhost:3000)
 Access the server [here](http://localhost:4000)
