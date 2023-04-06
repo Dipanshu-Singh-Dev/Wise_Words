@@ -43,8 +43,12 @@ The post page has three parts:
 - _Comments_ receives the post's comments in the database adds each one to the div to be displayed.
 
 _3. Create Page:_
-On the Home Page when the user is logged in as an _Author_ or an _Admin_ a Create button is conditionally rendered to provide them access to the Page for creating a post.Even if we try to access the create route by editing the url we will only get the message "Not Authorized". _Add Post Form_ does client side validation with React-Hook-Form such none of the fields can be empty.
-On this page there are two input fields one for _Title_ and one for _Body_.
-The Body Input field with DraftJS and React Draft Wysiwyg.
-There are 5 options to make the text rich. Make it Bold,Italic or underline or make an ordered or unordered list.
-On submitting the form an axios post request is made with the username stored in redux store and the title & body in the form.
+
+- On the Home Page when the user is logged in as an _Author_ or an _Admin_ a Create button is conditionally rendered to provide them access to the Page for creating a post.Even if we try to access the create route by editing the url we will only get the message "Not Authorized".
+
+- _Add Post Form_ does client side validation with React-Hook-Form such none of the fields can be empty.
+  On this page there are two input fields one for _Title_ and one for _Body_.
+
+  - The Body Input field with DraftJS and React Draft Wysiwyg.
+  - There are 5 options to make the text rich. Make it Bold,Italic or underline or make an ordered or unordered list.
+  - On submitting the form an axios post request is made with the username stored in redux store and the title & body in the form.
