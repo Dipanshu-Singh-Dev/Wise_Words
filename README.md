@@ -73,9 +73,9 @@ For testing three users have been created :
 _7. User Roles:_
 As instructed by the assingment pdf:
 
-- | Roles                 | Can Edit Posts? | Can Edit Which Posts? | Can Create Posts? | Can Delete Posts? | Column 6        | Column 7        |
-  | --------------------- | --------------- | --------------------- | ----------------- | ----------------- | --------------- | --------------- |
-  | Admin                 | Yes             | Any                   | Yes               | Yes               | Row 1, Column 6 | Row 1, Column 7 |
-  | Author                | Yes             | Their Own             | Yes               | Yes               | Row 2, Column 6 | Row 2, Column 7 |
-  | Reader(Logged in)     | No              | None                  | Yes               | No                | Row 3, Column 6 | Row 3, Column 7 |
-  | Reader(Not Logged in) | No              | None                  | No                | No                | Row 4, Column 6 | Row 4, Column 7 |
+| Roles                 | Can edit posts? | Can edit which posts? | Can create posts? | Can delete posts? | Can delete which posts? | Can read posts? | Can comment on posts? |
+| --------------------- | --------------- | --------------------- | ----------------- | ----------------- | ----------------------- | --------------- | --------------------- |
+| Admin                 | Yes             | Any                   | Yes               | Yes               | Any                     | Yes             | Yes                   |
+| Author                | Yes             | Their Own             | Yes               | Yes               | Their Own               | Yes             | Yes                   |
+| Reader(Logged in)     | No              | None                  | Yes               | No                | None                    | Yes             | Yes                   |
+| Reader(Not Logged in) | No              | None                  | No                | No                | None                    | Yes             | No                    |
