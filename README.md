@@ -48,6 +48,8 @@ _2. Post page:_
 The post page has three parts:
 
 - _The Post_ itself on the left with _Edit_ and _Delete_ buttons that will be conditionally rendered when the user is logged in as an _Admin_ or _Author_ of the post in the database. The HTML for the post rich text will be parsed by using UseLayoutEffect hook to prevent the user from seeing html as text.
+  1. _Edit_ is a link to the edit page.
+  2. _Delete_ is a simple button that makes a delete request to the server when clicked on.
 - _Add Comment Form_ for posting comments.The Add comment form uses React-Hook-Form for client side validation.When validations are satisfied and Submit button is pressed the _app_ makes a post request with axios to the database.
 - _Comments_ receives the post's comments in the database adds each one to the div to be displayed.
 
@@ -69,9 +71,6 @@ On clicking the Edit button on any post page we will take to the Edit page for t
 - With a getServerSideProps function identical to the function for the _Post Page_ we get the data first.
 - The data received with getServerSideProps is provided as default values to the input fields.
 - On Submitting a Patch request is made instead of a Post request.
-
-_5. Delete Button:_
-If the user is either logged in as admin or the author of the post they see delete button on the post page and on clicking it they can delete the post from the database.
 
 _6. Login:_
 Login page is a simple form to log the user in and provide them role in redux store of either an _Author_ or an _admin_.
