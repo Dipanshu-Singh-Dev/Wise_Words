@@ -57,14 +57,17 @@ Login page is a simple form to log the user in and provide them role in redux st
 The page is rendered using Static Generation since no props are needed.
 For testing three users have been created :
 
-- _Username_ : admin,
-  _Role_ : admin,
+- _Role_ : Admin,
+  _Username_ : admin,
   _Password_ : 123456
-- _Username_ : author1,
-  _Role_ : author,
+- _Role_ : Author,
+  _Username_ : author1,
   _Password_ : 123456
-- _Username_ : author2,
-  _Role_ : author,
+- _Role_ : Author,
+  _Username_ : author2,
+  _Password_ : 123456
+- _Role_: Reader,
+  _Username_: reader,
   _Password_ : 123456
 
 _7. User Roles:_
