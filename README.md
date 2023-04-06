@@ -66,3 +66,13 @@ For testing three users have been created :
 - _Username_ : author2,
   _Role_ : author,
   _Password_ : 123456
+
+_7. User Roles:_
+As instructed by the assingment pdf:
+
+- Admin : The Admin can edit or delete any post. They can also create posts.
+- Author : They can edit or delete their posts. They can also create posts.
+- | Column 1        | Column 2        | Column 3        |
+  | --------------- | --------------- | --------------- |
+  | Row 1, Column 1 | Row 1, Column 2 | Row 1, Column 3 |
+  | Row 2, Column 1 | Row 2, Column 2 | Row 2, Column 3 |
